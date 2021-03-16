@@ -19,18 +19,25 @@ Create new maven project and give the project name - Headless chrome framework
 Add the dependency in pom file.
 
 Add the plugins - TestNG and Maven Helper.
+
 Type of framework - Data driven framework.
+
 Packages - We have a separate package for Com and TestCase and Listeners. All web page related class  under in Com package and all test cases  in under TestCase and ExtentReport content class under in Listeners. 
 
 Com package---
+
 Content class - This class is responsible for loading the test cases from excel sheet.
 Download Apache POI libraries dependency in pom files.
 XSSF(XML Spreadsheet Format) this is the interface using for read and write the data from excel sheet using XSSFWorkbook workbook.
-DriverUtility class - This class stores and handles the functions (The code which is repetitive in nature such as waits, capturing screenshots, accessing excels, sending email, etc.,) which can be commonly used across the entire framework.In this class load the properties file and put the urlkeys.
+
+DriverUtility class - This class stores and handles the functions (The code which is repetitive in nature such as waits, capturing screenshots, accessing excels, sending email, etc.,) which can be commonly used across the entire framework.In this class load the properties file and put the urlkeys and also handle calendar dates through excel sheet.
+
 OpenBrowser Interface - This file stores the information that remains static throughout the framework such as browser path, application URL, Key path etc.
 
 FillTheForm class - This class is responsible for reading all sheet header values from excel sheet using List<SheetColumnHeader> sheetColumnHeaders = fileUtil.readFile();and adding the assertion for each test cases with using Assert.assertequal() method.
+	
 Object.properties - This file stores the all keys path(css selector) for button and text field.
+
 Listeners package ---
 ExtentReport class - This class generate the report.
 First load the properties file. And set the report path.
@@ -40,13 +47,16 @@ Set the log with status with test case -
 (context.getSkippedTests(), LogStatus.SKIP);
 Set the description of each test case with using .getParameters()[0]toString()
 Add the Time calendar.
+
 Testcase package --- 
 In this package we store excel sheet( store all test cases).
 Create TestNG.xml file and add the Listener in TestNG file
 <listeners>
    <listener class-name="Listeners.ExtentReport"/>
 </listeners>
+
 Run the Framework.
+
 Check the user.Extent.html file and run this file and get the report.
 
 Some dependencies we use in this framework:-
