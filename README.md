@@ -71,7 +71,8 @@ In this package we store excel sheet( store all test cases).
 				<artifactId>poi-ooxml</artifactId>
 				<version>3.9</version>
 		</dependency>
-	* TestNg dependency is mentioned below
+		
+* TestNg dependency is mentioned below
 
 		<dependency>
 				<groupId>org.testng</groupId>
