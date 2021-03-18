@@ -60,30 +60,33 @@ In this package we store excel sheet( store all test cases).
 
 ### Some dependencies we use in this framework:-
 * To read data from an excel file we need Apache POI maven dependency
-	<dependency>
-	   	<groupId>org.apache.poi</groupId>
-	   		<artifactId>poi</artifactId>
-	   		<version>3.9</version>
-	</dependency>
-	<dependency>
-	   		<groupId>org.apache.poi</groupId>
-	   		<artifactId>poi-ooxml</artifactId>
-	   		<version>3.9</version>
-	</dependency>
-* TestNg dependency is mentioned below
-	<dependency>
-	   		<groupId>org.testng</groupId>
-	   		<artifactId>testng</artifactId>
-	   		<version>7.1.0</version>
-	   		<scope>compile</scope>
-	</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>3.9</version>
+		</dependency>
+		<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>3.9</version>
+		</dependency>
+	* TestNg dependency is mentioned below
+
+		<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>7.1.0</version>
+				<scope>compile</scope>
+		</dependency>
 
 * Extent Report dependency is mentioned below
-	<dependency>
-		<groupId>com.relevantcodes</groupId>
-	        <artifactId>extentreports</artifactId>
-	        <version>2.41.2</version>
-	</dependency>
+
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
 
 ## How to Run in Azure pipeline:-	
 
